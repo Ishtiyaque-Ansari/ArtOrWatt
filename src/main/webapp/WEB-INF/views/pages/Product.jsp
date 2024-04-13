@@ -1,863 +1,1265 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="vieweport" content="width=device-width, initial-scale=1.0">
-  
-    <title> All Products - ART OR WHAT</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<title>Art Or Watt - Product</title>
+<meta charset="UTF-8">
+<meta name="vieweport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+<title>ART OR WHAT</title>
+<link href="/vendor/css/bootstrap.min.css" />
+</head>
 <style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.navbar-light .navbar-nav .nav-link {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 13px;
-  text-decoration: none;
-  background: light;
-  color: black;
-  font-family: "open-sans";
-  transition: 0.3s ease;
-  border-top: 4px solid #f8f9fa;
-  border-bottom: 4px solid #f8f9fa;
-  padding: 20px 0;
-  margin: 0 20px;
+@media ( min-width : 1025px) {
+	.h-custom {
+		height: 100vh !important;
+	}
 }
 
-body{
-    font-family: "Poppins", sans-serif;
-}
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-
-}
-nav{
-    flex: 1;
-    text-align: right;
-}
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-}
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
-a{
-    text-decoration: none;
-    color: #555;
- }
-p{
-        color: #555;
- }
-.container{
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.col-2{
-    flex-basis:50%;
-    min-width: 300px;
-
-}
-.col-2 img{
-    max-width: 100%;
-    padding: 50px 0;
-}
-.col-2 h1{
-    font-size: 50px;
-    line-height: 60px;
-    margin: 25px 0;
-}
-.btn{
-    display: inline-block;
-    background: #ff523b;
-    color: #fff;
-    padding: 8px 30px;
-    border-radius: 30px;
-    transition: background 0.5;
-}
-.btn:hover{
-    background: #563434;
+.card-registration .select-input.form-control[readonly]:not([disabled])
+	{
+	font-size: 1rem;
+	line-height: 2.15;
+	padding-left: .75em;
+	padding-right: .75em;
 }
 
-.header{
-    background: radial-gradient(#fff,#ffd6d6);
-
-}
-.logo img{
-    width: 100px;
+.card-registration .select-arrow {
+	top: 13px;
 }
 
-
-.header .row{
-    margin-top: 70px;
-     
-}
-.categories{
-    margin: 70px 0;
-}
-.col-3{
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
-.col-3 img{
-    width: 100%;
-
+.bg-grey {
+	background-color: #eae8e8;
 }
 
-.small-container{
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.title{
-    text-align: center;
-    margin: 0 auto 80px;
-    position: relative;
-    line-height: 60px;
-    color: #555;
-}
-.title::after{
-    content: '';
-    background: #ff523b;
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-h4{
-    color: #555;
-    font-weight: normal;
-
-}
-.col-4{
-    flex-basis: 25%;
-    padding: 10px;
-    min-width: 200px;
-    margin-bottom: 50px;
-    transition: transform 0.5s;
-
-}
-.col-4 img{
-    width: 100%;
-}
-.col-4 p{
-    font-size: 14px;
-}
-.col-4:hover{
-    transform: translateY(-5px);
-}
-.rating .fa{
-    color: #ff523b;
-}
-/-----offer--/
-.offer{
-    background: radial-gradient(#fff,#fff);   
-    margin-bottom: 80px;
-    padding: 30px 0;
-}
-.col-2 .offer-img{
-    padding: 50px;
-}
-small{
-    color: #555;
-}
-/----testimonial---/
-.testimonial{
-    padding-top: 100px;
-}
-.testimonial .col-3{
-    text-align: center;
-    padding: 40px 20px;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.5s;
-
-}
-.testimonial .col-3 img{
-    width: 50px;
-    margin-top: 20px;
-    border-radius: 50%;
-}
-.testimonial .col-3:hover{
-    transform: translateY(-10px);
-}
-.fa.fa-quote-left{
-    font-size: 34px;
-    color: #ff523b;
-}
-.col-3:p{
-    font-size: 12px;
-    margin: 12px 0;
-    color: #777;    
-}
-.testimonial col-3 h3{
-    font-weight: 600;
-    color:#555;
-    font-size: 16px;
-}
-/----footer-----/
-.footer{
-    background:#000;
-    color: #8a8a8a;
-    font-size: 14px;
-    padding: 60px 0 20px;
-}
-.footer p{
-    color: #8a8a8a;
-}
-.footer h3{
-    color: #fff;
-    margin-bottom: 20px;
-}
-.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-.footer-col-1{
-    flex-basis: 30%;
-}
-.footer-col-1 img{
-    width: 200px;
-    margin-bottom: 20px;
-}
-.footer-col-2{
-    flex: 1;
-    text-align: center;
+@media ( min-width : 992px) {
+	.card-registration-2 .bg-grey {
+		border-top-right-radius: 16px;
+		border-bottom-right-radius: 16px;
+	}
 }
 
-.footer-col-3, .footer-col-4{
-    flex-basis: 12%;
-    text-align: center;
-}
-ul{
-    list-style-type: none;
-}
-.footer hr{
-    border: none;
-    background: #b5b5b5;
-    height: 1px;
-    margin: 20px o;
-
-}
-.copyrigth{
-    text-align: center;
-}
-.menu-icon{
-    width: 28px;
-    margin-left: 20px;
-    display: none;
-}
-/---media query for menu----/
-@media only screen and (max-width: 800px) {
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background: #333;
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a{
-        color: #fff;
-    }
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-    }
-}
-/-------all products-----/
-.row-2{
-    justify-content: space-between;
-    margin: 100px auto 50px;
+@media ( max-width : 991px) {
+	.card-registration-2 .bg-grey {
+		border-bottom-left-radius: 16px;
+		border-bottom-right-radius: 16px;
+	}
 }
 
-select{
-    border: 1px solid #ff523b;
-}
-select:focus{
-    outline: none;
-}
-.page-btn{
-    margin: 0 auto 80px;
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-}
-.page-btn span{
-    display: inline-block;
-    border: 1px solid #ff523b;
-    margin-left: 10px;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-}
-.page-btn span:hover{
-    background: #ff523b;
-    color: #fff;
-
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif
 }
 
-/-----single products details-----/
-
-.single-products{
-    margin-top: 80px;
-
-}
-.single-products .col-2 img{
-    padding: 0;
-}
-.single-products .col-2{
-    padding: 20px;
-}
-.single-products h4{
-    margin: 20px 0;
-    font-size: 26px;
-    font-weight: bold;
-
-}
-.single-products select{
-    display: block;
-    padding: 10px;
-    margin-bottom: 20px;
-
-}
-.single-products input{
-    width:50px ;
-    height:40px ;
-    padding-left:10px ;
-    font-size:20px ;
-    margin-bottom:20px ;
-    border: 1px solid #ff523b;
-}
-input:focus{
-    outline: none;
-}
-.single-products .fa{
-    color: #ff523b;
-    margin-left: 10px;
-}
-.small-img-row{
-    display: flex;
-    justify-content: space-between;
-}
-.small-img-col{
-    flex-basis: 24%;
-    cursor: pointer;
-}
-/-----Cart item Details-----/
-.cart-page{
-    margin: 80px auto;
-
-}
-table{
-    width: 100%;
-    border-collapse: collapse;
-}
-/---Contec Us-----/
-
-.container{
-    width: 80%;
-    margin: 50px auto;
-    font-family: 'Times New Roman', Times, serif;
-}
-.contact-box{
-    background: white;
-    display: flex;
-}
-.contact-left{
-    flex-basis: 60%;
-    padding: 40px 60px;
-}
-.contact-right{
-    flex-basis: 40%;
-    padding: 40px ;
-    background: #ff523b;
-    color: white;
-}
-h1{
-    margin-bottom: 10px;
-}
-.container p{
-    margin-bottom: 40px;
-    font-size: 17px;
-}
-.input-row{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-.input-row .input-group{
-    flex-basis: 45%;
-
-}
-input{
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    outline: none;
-    padding-bottom: 5px;
-}
-textarea{
-    width: 100%;
-    border:  1px solid #ccc;
-    outline: none;
-    padding: 10px;
-    box-sizing: border-box;
-}
-label{
-    margin-bottom: 6px;
-    display: block;
-    color: #000;
-}
-button{
-    background: #ff523b;
-    width: 100px;
-    border: none;
-    outline: none;
-    color: white;
-    height: 35px;
-    border-radius: 30px;
-    margin-top: 20px;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
-}
-.contact-left h3{
-    color: #000;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-.contact-right h3{
-   
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-tr td:first-child{
-    padding-right: 20px;
-}
-tr td{
-    padding-top: 20px;
+body {
+	background-color: #f4f4f4
 }
 
-/-----About Us------/
-.h1{
-    font-size: 35px;
-    text-align: center;
-    margin-right: 50px;
-
-}
-.row-about-us{
-    width: 80%;
-    max-width: 1170px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px 30px;
-    text-align: center;
-
-}
-.row-about-us .left{
-    overflow: hidden;
-    
-}
-.row-about-us .left img{
-    width: 100%;
-    height: 90%;
-    object-fit: cover;
-    margin-right: 10px;
-    margin-top: 25px;
-   align-items: center;
-   margin-bottom: 25px;
-}
-.row-about-us .right{
-    display: flex;
-    
-
-}
-.row-about-us .right .content{
-    padding-left: 20px;
-
-}
-.row-about-us .right .content p{
-    font-size: 18px;
-    line-height: 26px;
-    padding-bottom: 15px;
+.container {
+	margin: 40px auto
 }
 
-.row-about-us .right .content h2{
-    font-size: 30px;
-}
-    
-    
-
-button{
-    background: #ff523b;
-    width: 100px;
-    border: none;
-    outline: none;
-    color: white;
-    height: 35px;
-    border-radius: 30px;
-    margin-top: 20px;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+.col-lg-4, .col-md-6 {
+	padding-right: 0
 }
 
-
-
-
-/----account-page---/
-.account-page{
-    padding: 50px 0;
-    background: radial-gradient(#fff,#ffd6d6);
-}
-.form-container{
-    background: #fff;
-    width: 300px;
-    height: 400px;
-    position: relative;
-    text-align: center;
-    padding:20px 0 ;
-    margin: auto;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
-    overflow: hidden;
-    
-}
-.form-container span{
-    font-weight: bold;
-    padding: 0 10px;
-    color: #555;
-    cursor: pointer;
-    width: 100px;
-    display: inline-block;
-}
-.form-btn{
-    display: inline-block;
-}
-.form-container  form{
-    max-width: 300px;
-    padding: 0 20px;
-    position: absolute;
-    top: 130px;
-    transition: transform 1s;
-}
-form input{
-    width: 100%;
-    height: 30px;
-    margin: 10px 0;
-    padding: 0 10px;
-    border: 1px solid #ccc;
-}
-form .btn{
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    margin: 10px 0;
-}
-form .btn :focus{
-    outline: none;
-}
-#LoginForm{
-    left: -300px;
-
-}
-#RegForm{
-    left: 0;
-}
-form a{
-    font-size: 12px;
-}
-#Indicator{
-    width: 100px;
-    border: none;
-    background: #ff523b;
-    height: 3px;
-    margin-top: 8px;
-    transform: translate(100px);
-    transition: transform 1s;
-}
-/----Cart Page---/
-.gradient-custom {
-    /* fallback for old browsers */
-    background: #6a11cb;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
-    }
-
-/---media query for less then  600 screen size----/
-@media only screen and (max-width: 600px){
-    .row{
-        text-align: center;
-}
-.col-2, .col-3, .col-4{
-    flex-basis: 100%;
+button.btn.btn-hide {
+	height: inherit;
+	background-color: #ff935d;
+	color: #fff;
+	font-size: 0.82rem;
+	padding-left: 40px;
+	padding-right: 40px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px
 }
 
+.btn:focus {
+	box-shadow: none
 }
 
-.typewriter {
-	width: 10ch;
-	overflow: hidden;
-	animation: typing 2.5s steps(15) infinite alternate-reverse;
+.box-label .btn {
+	background-color: #fff;
+	padding: 0;
+	font-size: 0.8rem
 }
 
-@keyframes typing {from { width:0ch;
-	
+.btn-red {
+	background-color: #e00000ce
 }
 
-to {
-	width: 15ch;
+.btn-orange {
+	background-color: #ffa500
 }
 
-}
-to {
-	width: 13ch;
-}
-
+.btn-pink {
+	background-color: #e0009dce
 }
 
-header+* {
-	margin-top: 60px;
+.btn-green {
+	background-color: #00811c
+}
+
+.btn-blue {
+	background-color: #026bc2
+}
+
+.btn-brown {
+	background-color: #994a00
+}
+
+.pagination .page-item .page-link {
+	color: #333;
+	border: none;
+	width: 40px;
+	text-align: center
+}
+
+.pagination .page-item.active .page-link {
+	background-color: #fff;
+	border: 1px solid #333
+}
+
+select {
+	outline: none;
+	padding: 6px 12px;
+	margin: 0px 4px;
+	color: #999;
+	font-size: 0.85rem;
+	width: 140px
+}
+
+#select2 {
+	border: 1px solid #777;
+	color: #999
+}
+
+#pro {
+	border: none;
+	color: #333;
+	font-weight: 700;
+	padding-left: 0px;
+	width: initial
+}
+
+#filterbar {
+	width: 30%;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	float: left
+}
+
+#filterbar input[type="radio"] {
+	visibility: hidden
+}
+
+#filterbar input[type='radio']:checked {
+	background-color: #16c79a;
+	border: none
+}
+
+#filterbar .btn.btn-success {
+	background-color: #ddd;
+	color: #333;
+	border: none;
+	width: 115px
+}
+
+#filterbar .btn.btn-success:hover {
+	background-color: #aff1e1;
+	color: #444
+}
+
+#filterbar .btn-success:not(:disabled):not(.disabled).active, #filterbar .btn-success:not(:disabled):not(.disabled):active
+	{
+	background-color: #16c79a;
+	color: #fff
+}
+
+label {
+	cursor: pointer
+}
+
+.tick {
+	display: block;
+	position: relative;
+	padding-left: 23px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	margin: 0
+}
+
+.tick input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0
+}
+
+.check {
+	position: absolute;
+	top: 1px;
+	left: 0;
+	height: 18px;
+	width: 18px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 3px
+}
+
+.tick:hover input ~.check {
+	background-color: #f3f3f3
+}
+
+.tick input:checked ~.check {
+	background-color: #ffffff
+}
+
+.check:after {
+	content: "";
+	position: absolute;
+	display: none
+}
+
+.tick input:checked ~.check:after {
+	display: block;
+	transform: rotate(45deg) scale(1)
+}
+
+.tick .check:after {
+	left: 6px;
+	top: 2px;
+	width: 5px;
+	height: 10px;
+	border: solid rgb(0, 0, 0);
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg) scale(2)
+}
+
+.box {
+	padding: 10px
+}
+
+.box-label {
+	color: #11698e;
+	font-size: 0.9rem;
+	font-weight: 800
+}
+
+#inner-box, #inner-box2 {
+	height: 150px;
+	overflow-y: scroll
+}
+
+#inner-box2 {
+	height: 132px
+}
+
+#inner-box::-webkit-scrollbar, #inner-box2::-webkit-scrollbar {
+	width: 6px
+}
+
+#inner-box::-webkit-scrollbar-track, #inner-box2::-webkit-scrollbar-track
+	{
+	background-color: #ddd;
+	border-radius: 2px
+}
+
+#inner-box::-webkit-scrollbar-thumb, #inner-box2::-webkit-scrollbar-thumb
+	{
+	background-color: #333;
+	border-radius: 2px
+}
+
+#price {
+	height: 45px
+}
+
+#size input[type="checkbox"] {
+	visibility: hidden
+}
+
+#size input[type='checkbox']:checked {
+	background-color: #16c79a;
+	border: none
+}
+
+#size .btn.btn-success {
+	background-color: #ddd;
+	color: #333;
+	border: none;
+	width: 40px;
+	font-size: 0.8rem;
+	border-radius: 0
+}
+
+#size .btn.btn-success:hover {
+	background-color: #aff1e1;
+	color: #444
+}
+
+#size .btn-success:not(:disabled):not(.disabled).active, #size .btn-success:not(:disabled):not(.disabled):active
+	{
+	background-color: #16c79a;
+	color: #fff
+}
+
+#size label {
+	margin: 10px;
+	margin-left: 0px
+}
+
+.card {
+	padding: 10px;
+	cursor: pointer;
+	transition: .3s all ease-in-out;
+	height: 350px
+}
+
+.card:hover {
+	box-shadow: 2px 2px 15px #fd9a6ce5;
+	transform: scale(1.02)
+}
+
+.card .product-name {
+	font-weight: 600
+}
+
+.card-body {
+	padding-bottom: 0
+}
+
+.card .text-muted {
+	font-size: 0.82rem
+}
+
+.card-img img {
+	padding-top: 10px;
+	width: inherit;
+	height: 180px;
+	object-fit: contain;
+	display: block
+}
+
+.card-body .btn-group .btn {
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	border-radius: 50%;
+	position: relative
+}
+
+.card-body .btn-group>.btn-group:not(:last-child)>.btn, .card-body .btn-group>.btn:not(:last-child)
+	{
+	border-radius: 50%;
+	transition: ease-in all .4s
+}
+
+.card-body input[type="radio"] {
+	visibility: hidden
+}
+
+.card-body .btn:not(:disabled):not(.disabled).active::after, .card-body .btn:not(:disabled):not(.disabled):active::after
+	{
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	top: 4px;
+	left: 4.2px;
+	background-color: #fff;
+	position: absolute;
+	transition: ease-in all .4s
+}
+
+.card-body .btn.btn-light:not(:disabled):not(.disabled).active::after,
+	.card-body .btn.btn-light:not(:disabled):not(.disabled):active::after {
+	background-color: #000
+}
+
+#avail-size input[type="checkbox"] {
+	visibility: hidden
+}
+
+#avail-size input[type='checkbox']:checked {
+	background-color: #16c79a;
+	border: none
+}
+
+#avail-size .btn.btn-success {
+	background-color: #ddd;
+	color: #333;
+	border: none;
+	width: 20px;
+	font-size: 0.7rem;
+	border-radius: 0;
+	padding: 0
+}
+
+#avail-size .btn.btn-success:hover {
+	background-color: #aff1e1;
+	color: #444
+}
+
+#avail-size .btn-success:not(:disabled):not(.disabled).active,
+	#avail-size .btn-success:not(:disabled):not(.disabled):active {
+	background-color: #16c79a;
+	color: #fff
+}
+
+#avail-size label {
+	margin: 10px;
+	margin-left: 0px
+}
+
+#shirt {
+	height: 170px
+}
+
+.middle {
+	position: relative;
+	width: 100%;
+	margin-top: 25px
+}
+
+.slider {
+	position: relative;
+	z-index: 1;
+	height: 5px;
+	margin: 0 15px
+}
+
+.slider>.track {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color: #ddd
+}
+
+.slider>.range {
+	position: absolute;
+	z-index: 2;
+	left: 25%;
+	right: 25%;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color: #36a31b
+}
+
+.slider>.thumb {
+	position: absolute;
+	top: 2px;
+	z-index: 3;
+	width: 20px;
+	height: 20px;
+	background-color: #36a31b;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(63, 204, 75, 0.705);
+	transition: box-shadow .3s ease-in-out
+}
+
+.slider>.thumb::after {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	left: 28%;
+	top: 30%;
+	border-radius: 50%;
+	content: '';
+	background-color: #fff
+}
+
+.slider>.thumb.left {
+	left: 25%;
+	transform: translate(-15px, -10px)
+}
+
+.slider>.thumb.right {
+	right: 25%;
+	transform: translate(15px, -10px)
+}
+
+.slider>.thumb.hover {
+	box-shadow: 0 0 0 10px rgba(125, 230, 134, 0.507)
+}
+
+.slider>.thumb.active {
+	box-shadow: 0 0 0 10px rgba(63, 204, 75, 0.623)
+}
+
+input[type=range] {
+	position: absolute;
+	pointer-events: none;
+	-webkit-appearance: none;
+	z-index: 2;
+	height: 10px;
+	width: 100%;
+	opacity: 0
+}
+
+input[type=range]::-webkit-slider-thumb {
+	pointer-events: all;
+	width: 30px;
+	height: 30px;
+	border-radius: 0;
+	border: 0 none;
+	background-color: red;
+	-webkit-appearance: none
+}
+
+.del {
+	text-decoration: line-through;
+	color: red
+}
+
+@media ( min-width :1199.6px) {
+	#filterbar {
+		width: 25%
+	}
+}
+
+@media ( max-width :1199.5px) {
+	#filterbar {
+		width: 28%
+	}
+	.card {
+		height: 350px
+	}
+	.price {
+		font-size: 0.9rem
+	}
+	.product-name {
+		font-size: 0.8rem
+	}
+}
+
+@media ( max-width : 991.5px) {
+	#filterbar {
+		width: 36%
+	}
+	#sort {
+		background-color: inherit;
+		color: #fff;
+		margin: 0;
+		margin-bottom: 20px;
+		width: 100%
+	}
+	#sort option, #pro option {
+		color: #000
+	}
+	#pro, #select2, .result {
+		background-color: inherit;
+		color: #fff
+	}
+	.card {
+		height: 345px
+	}
+	.price {
+		font-size: 0.85rem
+	}
+}
+
+@media ( max-width : 767.5px) {
+	#filterbar {
+		width: 50%
+	}
+}
+
+@media ( max-width : 525.5px) {
+	#filterbar {
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+		border-radius: 5px
+	}
+	#content.my-5 {
+		margin-top: 20px !important;
+		margin-bottom: 20px !important
+	}
+	.col-lg-4, .col-md-6 {
+		padding-left: 0
+	}
+}
+
+@media ( max-width : 500.5px) {
+	.pagination {
+		display: none
+	}
 }
 </style>
-<link rel="stylesheet" type="text/css" href="/css/index.css">
-<link href="/vendor/css/bootstrap.min.css">
-</head>
+
 <body>
-	<header><jsp:include page="../temples/Header.jsp"></jsp:include>
+	<!-- header -->
+	<header>
+		<!-- Navbar -->
+		<nav style="width: 78.9rem"
+			class="navbar navbar-expand-lg navbar-dark bg-primary bg-dark">
+			<!-- Container wrapper -->
+			<div class="container-fluid">
+				<!-- Navbar brand -->
+				<a class="navbar-brand mt-2 mt-lg-0" href="#">
+					<h5 class="pt-1">Art Or Watt</h5>
+				</a>
+				<!-- Collapsible wrapper -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<!-- Left links -->
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 text-right">
+						<li class="nav-item"><a class="nav-link" href="index">Home</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="product">Product</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="contact-us">Contact-us</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="about-us">About-Us</a>
+						</li>
+					</ul>
+					<div style="margin-left: 43rem">
+						<a class="btn btn-outline-light"
+							href="login">Log in</a>
+						<!-- Right elements -->
+					</div>
+				</div>
+				<!-- Collapsible wrapper -->
+			</div>
+			<!-- Container wrapper -->
+		</nav>
+		<!-- Navbar -->
 	</header>
-	<img src="C:\Users\RAHEEMA ENTERPRISES\Downloads\shopping-bag.png" width="30px" height="30px">
-      <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\icons8-menu-50.png" class="menu-icon" onclick="menutoggle()">
-    </div>
-   
-    </div>
-     <div class="small-container">
+	<!-- header close -->
 
-      <div class="row row-2">
-         <h2>All Products</h2>
-         <ul>
-            <li><a href="T-Shirt.html">T-Shirt</a></li>
-            <li><a href="Jeans.html">Jeans</a></li>
-            <li><a href="Jacket.html">Jackets</a></li>
-            <li><a href="Exclusively Available.html">Exclusively Available</a></li>
-         </ul>
-      </div>
-      <div class="row">
-        <div class="col-4">
-          <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-          <h4>xyz</h4>
-          <div class="rating">
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star-o" ></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-          <h4>xyz</h4>
-          <div class="rating">
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star-o" ></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-          <h4>xyz</h4>
-          <div class="rating">
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star-o" ></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-          <h4>xyz</h4>
-          <div class="rating">
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star" ></i>
-            <i class="fa fa-star-o" ></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-      </div>
-      <div class="row">
-         <div class="col-4">
-           <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-           <h4>xyz</h4>
-           <div class="rating">
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star-o" ></i>
-             <i class="fa fa-star-o" ></i>
-           </div>
-           <p>$50.00</p>
-         </div>
-         <div class="col-4">
-           <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-           <h4>xyz</h4>
-           <div class="rating">
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star-o" ></i>
-           </div>
-           <p>$50.00</p>
-         </div>
-         <div class="col-4">
-           <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-           <h4>xyz</h4>
-           <div class="rating">
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star-o" ></i>
-           </div>
-           <p>$50.00</p>
-         </div>
-         <div class="col-4">
-           <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-           <h4>xyz</h4>
-           <div class="rating">
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star-o" ></i>
-           </div>
-           <p>$50.00</p>
-         </div>
-       </div>
-     
-       <div class="row">
-         <div class="col-4">
-           <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-           <h4>xyz</h4>
-           <div class="rating">
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star-o" ></i>
-           </div>
-           <p>$50.00</p>
-         </div>
-         <div class="col-4">
-           <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-           <h4>xyz</h4>
-           <div class="rating">
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star-o" ></i>
-           </div>
-           <p>$50.00</p>
-         </div>
-         <div class="col-4">
-           <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-           <h4>xyz</h4>
-           <div class="rating">
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star-o" ></i>
-           </div>
-           <p>$50.00</p>
-         </div>
-         <div class="col-4">
-           <img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Untitled design (1).png">
-           <h4>xyz</h4>
-           <div class="rating">
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star" ></i>
-             <i class="fa fa-star-o" ></i>
-           </div>
-           <p>$50.00</p>     
-     </div>
-     </div>
-     <div class="page-btn">
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
-      
-      <span>&#8594;</span>
-     </div>
-     </div>
+	<!-- product page details-->
+	<div class="container">
+		<div
+			class="bg-white rounded d-flex align-items-center justify-content-between"
+			id="header">
+			<button class="btn btn-hide text-uppercase" type="button"
+				data-toggle="collapse" data-target="#filterbar"
+				aria-expanded="false" aria-controls="filterbar" id="filter-btn"
+				onclick="changeBtnTxt()">
+				<span class="fas fa-angle-left" id="filter-angle"></span> <span
+					id="btn-txt">Hide filters</span>
+			</button>
+			<nav class="navbar navbar-expand-lg navbar-light pl-lg-0 pl-auto">
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#mynav" aria-controls="mynav" aria-expanded="false"
+					aria-label="Toggle navigation" onclick="chnageIcon()" id="icon">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mynav">
+					<ul class="navbar-nav d-lg-flex align-items-lg-center">
+						<li class="nav-item active"><select name="sort" id="sort">
+								<option value="" selected>Sort by</option>
+								<option value="price">Price</option>
+								<option value="popularity">Popularity</option>
+								<option value="rating">Rating</option>
+						</select></li>
+						<li
+							class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
+							<div class="d-inline-flex align-items-center mx-lg-2"
+								id="select2">
+								<div class="pl-2">Products:</div>
+								<select name="pro" id="pro">
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+								</select>
+							</div>
+							<div class="font-weight-bold mx-2 result">18 from 200</div>
+						</li>
+						<li class="nav-item d-lg-none d-inline-flex"></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="ml-auto mt-3 mr-2">
+				<nav aria-label="Page navigation example">
+					<ul class="pagination">
+						<li class="page-item"><a class="page-link" href="#"
+							aria-label="Previous"> <span aria-hidden="true"
+								class="font-weight-bold">&lt;</span> <span class="sr-only">Previous</span>
+						</a></li>
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">..</a></li>
+						<li class="page-item"><a class="page-link" href="#">24</a></li>
+						<li class="page-item"><a class="page-link" href="#"
+							aria-label="Next"> <span aria-hidden="true"
+								class="font-weight-bold">&gt;</span> <span class="sr-only">Next</span>
+						</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="content" class="my-5">
+			<div id="filterbar" class="collapse">
+				<div class="box border-bottom">
+					<div class="form-group text-center">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-success form-check-label"> <input
+								class="form-check-input" type="radio"> Reset
+							</label> <label class="btn btn-success form-check-label active">
+								<input class="form-check-input" type="radio" checked>
+								Apply
+							</label>
+						</div>
+					</div>
+					<div>
+						<label class="tick">New <input type="checkbox"
+							checked="checked"> <span class="check"></span>
+						</label>
+					</div>
+					<div>
+						<label class="tick">Sale <input type="checkbox"> <span
+							class="check"></span>
+						</label>
+					</div>
+				</div>
+				<div class="box border-bottom">
+					<div class="box-label text-uppercase d-flex align-items-center">
+						Outerwear
+						<button class="btn ml-auto" type="button" data-toggle="collapse"
+							data-target="#inner-box" aria-expanded="false"
+							aria-controls="inner-box" id="out" onclick="outerFilter()">
+							<span class="fas fa-plus"></span>
+						</button>
+					</div>
+					<div id="inner-box" class="collapse mt-2 mr-1">
+						<div class="my-1">
+							<label class="tick">Windbreaker <input type="checkbox"
+								checked="checked"> <span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Jumpsuit <input type="checkbox">
+								<span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Jacket <input type="checkbox">
+								<span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Coat <input type="checkbox">
+								<span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Raincoat <input type="checkbox">
+								<span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Handbag <input type="checkbox"
+								checked> <span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Warm vest <input type="checkbox">
+								<span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Wallets <input type="checkbox"
+								checked> <span class="check"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="box border-bottom">
+					<div class="box-label text-uppercase d-flex align-items-center">
+						season
+						<button class="btn ml-auto" type="button" data-toggle="collapse"
+							data-target="#inner-box2" aria-expanded="false"
+							aria-controls="inner-box2">
+							<span class="fas fa-plus"></span>
+						</button>
+					</div>
+					<div id="inner-box2" class="collapse mt-2 mr-1">
+						<div class="my-1">
+							<label class="tick">Spring <input type="checkbox"
+								checked="checked"> <span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Summer <input type="checkbox">
+								<span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Autumn <input type="checkbox" checked>
+								<span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Winter <input type="checkbox">
+								<span class="check"></span>
+							</label>
+						</div>
+						<div class="my-1">
+							<label class="tick">Rainy <input type="checkbox">
+								<span class="check"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="box border-bottom">
+					<div class="box-label text-uppercase d-flex align-items-center">
+						price
+						<button class="btn ml-auto" type="button" data-toggle="collapse"
+							data-target="#price" aria-expanded="false" aria-controls="price">
+							<span class="fas fa-plus"></span>
+						</button>
+					</div>
+					<div class="collapse" id="price">
+						<div class="middle">
+							<div class="multi-range-slider">
+								<input type="range" id="input-left" min="0" max="100" value="10">
+								<input type="range" id="input-right" min="0" max="100"
+									value="50">
+								<div class="slider">
+									<div class="track"></div>
+									<div class="range"></div>
+									<div class="thumb left"></div>
+									<div class="thumb right"></div>
+								</div>
+							</div>
+						</div>
+						<div
+							class="d-flex align-items-center justify-content-between mt-2">
+							<div>
+								<span id="amount-left" class="font-weight-bold"></span> uah
+							</div>
+							<div>
+								<span id="amount-right" class="font-weight-bold"></span> uah
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box-label text-uppercase d-flex align-items-center">
+						size
+						<button class="btn ml-auto" type="button" data-toggle="collapse"
+							data-target="#size" aria-expanded="false" aria-controls="size">
+							<span class="fas fa-plus"></span>
+						</button>
+					</div>
+					<div id="size" class="collapse">
+						<div class="btn-group d-flex align-items-center flex-wrap"
+							data-toggle="buttons">
+							<label class="btn btn-success form-check-label"> <input
+								class="form-check-input" type="checkbox"> 80
+							</label> <label class="btn btn-success form-check-label"> <input
+								class="form-check-input" type="checkbox" checked> 92
+							</label> <label class="btn btn-success form-check-label"> <input
+								class="form-check-input" type="checkbox" checked> 102
+							</label> <label class="btn btn-success form-check-label"> <input
+								class="form-check-input" type="checkbox" checked> 104
+							</label> <label class="btn btn-success form-check-label"> <input
+								class="form-check-input" type="checkbox" checked> 106
+							</label> <label class="btn btn-success form-check-label"> <input
+								class="form-check-input" type="checkbox" checked> 108
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="products">
+				<div class="row mx-0">
+					<div class="col-lg-4 col-md-6">
+						<div class="card d-flex flex-column align-items-center">
+							<div class="product-name">Torn Jeans for Men</div>
+							<div class="card-img">
+								<img
+									src="https://www.freepnglogos.com/uploads/jeans-png/jeans-mens-pants-cliparts-download-clip-art-37.png"
+									alt="">
+							</div>
+							<div class="card-body pt-5">
+								<div class="text-muted text-center mt-auto">Available
+									Colors</div>
+								<div
+									class="d-flex align-items-center justify-content-center colors my-2">
+									<div class="btn-group" data-toggle="buttons"
+										data-tooltip="tooltip" data-placement="right"
+										title="choose color">
+										<label class="btn btn-red form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-blue form-check-label active">
+											<input class="form-check-input" type="radio"
+											autocomplete="off">
+										</label> <label class="btn btn-green form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-orange form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-pink form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label>
+									</div>
+								</div>
+								<div class="d-flex align-items-center price">
+									<div class="del mr-2">
+										<span class="text-dark">5500 uah</span>
+									</div>
+									<div class="font-weight-bold">4500 uah</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 pt-md-0 pt-3">
+						<div class="card d-flex flex-column align-items-center">
+							<div class="product-name">Nike Tshirts for Men</div>
+							<div class="card-img">
+								<img
+									src="https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-printed-shirts-south-africa-20.png"
+									alt="" height="100" id="shirt">
+							</div>
+							<div class="text-muted text-center mt-auto">Available Sizes</div>
+							<div id="avail-size">
+								<div class="btn-group d-flex align-items-center flex-wrap"
+									data-toggle="buttons">
+									<label class="btn btn-success form-check-label"> <input
+										class="form-check-input" type="checkbox"> 80
+									</label> <label class="btn btn-success form-check-label"> <input
+										class="form-check-input" type="checkbox" checked> 92
+									</label> <label class="btn btn-success form-check-label"> <input
+										class="form-check-input" type="checkbox" checked> 102
+									</label> <label class="btn btn-success form-check-label"> <input
+										class="form-check-input" type="checkbox" checked> 104
+									</label> <label class="btn btn-success form-check-label"> <input
+										class="form-check-input" type="checkbox" checked> 106
+									</label> <label class="btn btn-success form-check-label"> <input
+										class="form-check-input" type="checkbox" checked> 108
+									</label>
+								</div>
+							</div>
+							<div class="card-body pt-0">
+								<div class="text-muted text-center mt-auto">Available
+									Colors</div>
+								<div
+									class="d-flex align-items-center justify-content-center colors my-2">
+									<div class="btn-group" data-toggle="buttons"
+										data-tooltip="tooltip" data-placement="right"
+										title="choose color">
+										<label class="btn btn-light border form-check-label">
+											<input class="form-check-input" type="radio"
+											autocomplete="off">
+										</label> <label class="btn btn-blue form-check-label active">
+											<input class="form-check-input" type="radio"
+											autocomplete="off">
+										</label> <label class="btn btn-green form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-orange form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-pink form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label>
+									</div>
+								</div>
+								<div class="d-flex align-items-center price">
+									<div class="del mr-2">
+										<span class="text-dark">5500 uah</span>
+									</div>
+									<div class="font-weight-bold">4500 uah</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3">
+						<div class="card d-flex flex-column align-items-center">
+							<div class="product-name text-center">Casual Dress Belts
+								For Men</div>
+							<div class="card-img">
+								<img
+									src="https://www.freepnglogos.com/uploads/belts-png/casual-dress-belts-for-men-28.png"
+									alt="">
+							</div>
+							<div class="card-body pt-5">
+								<div class="text-muted text-center mt-auto">Available
+									Colors</div>
+								<div
+									class="d-flex align-items-center justify-content-center colors my-2">
+									<div class="btn-group" data-toggle="buttons"
+										data-tooltip="tooltip" data-placement="right"
+										title="choose color">
+										<label class="btn btn-dark border form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-brown form-check-label active">
+											<input class="form-check-input" type="radio"
+											autocomplete="off">
+										</label>
+									</div>
+								</div>
+								<div
+									class="d-flex align-items-center justify-content-center price">
+									<div class="font-weight-bold">500 uah</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 pt-md-4 pt-3">
+						<div class="card d-flex flex-column align-items-center">
+							<div class="product-name text-center">Footwear For Women</div>
+							<div class="card-img">
+								<img
+									src="https://www.freepnglogos.com/uploads/women-shoes-png/download-women-shoes-png-image-png-image-pngimg-2.png"
+									alt="">
+							</div>
+							<div class="card-body pt-5">
+								<div class="text-muted text-center mt-auto">Available
+									Colors</div>
+								<div
+									class="d-flex align-items-center justify-content-center colors my-2">
+									<div class="btn-group" data-toggle="buttons"
+										data-tooltip="tooltip" data-placement="right"
+										title="choose color">
+										<label class="btn btn-dark border form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-brown form-check-label active">
+											<input class="form-check-input" type="radio"
+											autocomplete="off">
+										</label> <label class="btn btn-pink form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-red form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label>
+									</div>
+								</div>
+								<div
+									class="d-flex align-items-center justify-content-center price">
+									<div class="font-weight-bold">1500 uah</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 pt-md-4 pt-3">
+						<div class="card d-flex flex-column align-items-center">
+							<div class="product-name text-center">Nike Jogging shoes
+								For Men</div>
+							<div class="card-img">
+								<img
+									src="https://www.freepnglogos.com/uploads/shoes-png/find-your-perfect-running-shoes-26.png"
+									alt="">
+							</div>
+							<div class="card-body pt-5">
+								<div class="text-muted text-center mt-auto">Available
+									Colors</div>
+								<div
+									class="d-flex align-items-center justify-content-center colors my-2">
+									<div class="btn-group" data-toggle="buttons"
+										data-tooltip="tooltip" data-placement="right"
+										title="choose color">
+										<label class="btn btn-dark border form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-pink form-check-label active">
+											<input class="form-check-input" type="radio"
+											autocomplete="off">
+										</label> <label class="btn btn-blue form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-orange form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label>
+									</div>
+								</div>
+								<div
+									class="d-flex align-items-center justify-content-center price">
+									<div class="font-weight-bold">1200 uah</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 pt-md-4 pt-3">
+						<div class="card d-flex flex-column align-items-center">
+							<div class="product-name text-center">Leather Wallets For
+								Men</div>
+							<div class="card-img">
+								<img
+									src="https://www.freepnglogos.com/uploads/money-png/money-wallet-dollar-image-money-pictures-download-27.png"
+									alt="">
+							</div>
+							<div class="card-body pt-5">
+								<div class="text-muted text-center mt-auto">Available
+									Colors</div>
+								<div
+									class="d-flex align-items-center justify-content-center colors my-2">
+									<div class="btn-group" data-toggle="buttons"
+										data-tooltip="tooltip" data-placement="right"
+										title="choose color">
+										<label class="btn btn-dark border form-check-label"> <input
+											class="form-check-input" type="radio" autocomplete="off">
+										</label> <label class="btn btn-brown form-check-label active">
+											<input class="form-check-input" type="radio"
+											autocomplete="off">
+										</label>
+									</div>
+								</div>
+								<div
+									class="d-flex align-items-center justify-content-center price">
+									<div class="font-weight-bold">900 uah</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- product page details end-->
 
-     <!------footer------>
-       <div class="footer">
-        
-       </div>
 
-       <!-----Js for Toggle Menu------>
-       <script>
-        var MenuItem = document.getElementById("MenuItem");
-        MenuItem.style.maxHeight="0px";
-        function  menutoggle(){
-          if(MenuItem.style.maxHeight="0px")
-          {
-            MenuItem.style.maxHeight="200px;"
-          }
-          else
-          {
-            MenuItem.style.maxHeight="0px";
+	<!-- footer -->
+	<footer class="bg-primary text-center text-white bg-dark" style=""><jsp:include
+			page="../temples/Footer.jsp"></jsp:include></footer>
+	<!-- footer close -->
+</body>
+<script type="text/javascript">
+	// For Filters
+	document
+			.addEventListener(
+					"DOMContentLoaded",
+					function() {
+						var filterBtn = document.getElementById('filter-btn');
+						var btnTxt = document.getElementById('btn-txt');
+						var filterAngle = document
+								.getElementById('filter-angle');
 
-          }
-        }    
-        
-        $('.navbar-nav .nav-link').on('click', function() {
-	        $('.navbar-nav .nav-link').removeClass('active');
-	        $(this).addClass('active');
-	    });
+						$('#filterbar').collapse(false);
+						var count = 0, count2 = 0;
+						function changeBtnTxt() {
+							$('#filterbar').collapse(true);
+							count++;
+							if (count % 2 != 0) {
+								filterAngle.classList.add("fa-angle-right");
+								btnTxt.innerText = "show filters"
+								filterBtn.style.backgroundColor = "#36a31b";
+							} else {
+								filterAngle.classList.remove("fa-angle-right")
+								btnTxt.innerText = "hide filters"
+								filterBtn.style.backgroundColor = "#ff935d";
+							}
 
-       </script>
-    </body>
+						}
+
+						// For Applying Filters
+						$('#inner-box').collapse(false);
+						$('#inner-box2').collapse(false);
+
+						// For changing NavBar-Toggler-Icon
+						var icon = document.getElementById('icon');
+
+						function chnageIcon() {
+							count2++;
+							if (count2 % 2 != 0) {
+								icon.innerText = "";
+								icon.innerHTML = '<span class="far fa-times-circle" style="width:100%"></span>';
+								icon.style.paddingTop = "5px";
+								icon.style.paddingBottom = "5px";
+								icon.style.fontSize = "1.8rem";
+
+							} else {
+								icon.innerText = "";
+								icon.innerHTML = '<span class="navbar-toggler-icon"></span>';
+								icon.style.paddingTop = "5px";
+								icon.style.paddingBottom = "5px";
+								icon.style.fontSize = "1.2rem";
+							}
+						}
+
+						// Showing tooltip for AVAILABLE COLORS
+						$(function() {
+							$('[data-tooltip="tooltip"]').tooltip()
+						})
+
+						// For Range Sliders
+						var inputLeft = document.getElementById("input-left");
+						var inputRight = document.getElementById("input-right");
+
+						var thumbLeft = document
+								.querySelector(".slider > .thumb.left");
+						var thumbRight = document
+								.querySelector(".slider > .thumb.right");
+						var range = document.querySelector(".slider > .range");
+
+						var amountLeft = document.getElementById('amount-left')
+						var amountRight = document
+								.getElementById('amount-right')
+
+						function setLeftValue() {
+							var _this = inputLeft, min = parseInt(_this.min), max = parseInt(_this.max);
+
+							_this.value = Math.min(parseInt(_this.value),
+									parseInt(inputRight.value) - 1);
+
+							var percent = ((_this.value - min) / (max - min)) * 100;
+
+							thumbLeft.style.left = percent + "%";
+							range.style.left = percent + "%";
+							amountLeft.innerText = parseInt(percent * 100);
+						}
+						setLeftValue();
+
+						function setRightValue() {
+							var _this = inputRight, min = parseInt(_this.min), max = parseInt(_this.max);
+
+							_this.value = Math.max(parseInt(_this.value),
+									parseInt(inputLeft.value) + 1);
+
+							var percent = ((_this.value - min) / (max - min)) * 100;
+
+							amountRight.innerText = parseInt(percent * 100);
+							thumbRight.style.right = (100 - percent) + "%";
+							range.style.right = (100 - percent) + "%";
+						}
+						setRightValue();
+
+						inputLeft.addEventListener("input", setLeftValue);
+						inputRight.addEventListener("input", setRightValue);
+
+						inputLeft.addEventListener("mouseover", function() {
+							thumbLeft.classList.add("hover");
+						});
+						inputLeft.addEventListener("mouseout", function() {
+							thumbLeft.classList.remove("hover");
+						});
+						inputLeft.addEventListener("mousedown", function() {
+							thumbLeft.classList.add("active");
+						});
+						inputLeft.addEventListener("mouseup", function() {
+							thumbLeft.classList.remove("active");
+						});
+
+						inputRight.addEventListener("mouseover", function() {
+							thumbRight.classList.add("hover");
+						});
+						inputRight.addEventListener("mouseout", function() {
+							thumbRight.classList.remove("hover");
+						});
+						inputRight.addEventListener("mousedown", function() {
+							thumbRight.classList.add("active");
+						});
+						inputRight.addEventListener("mouseup", function() {
+							thumbRight.classList.remove("active");
+						});
+					});
+</script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>

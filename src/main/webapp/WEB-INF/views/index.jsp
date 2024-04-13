@@ -1,296 +1,308 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+<meta charset="UTF-8">
+<title>Art Or watt - Home </title>
 <meta charset="UTF-8">
 <meta name="vieweport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 	integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
 <title>ART OR WHAT</title>
 <link rel="stylesheet" type="text/css" href="/css/index.css">
-<link href="/vendor/css/bootstrap.min.css">
-<style type="text/css">
-.navbar-light .navbar-nav .nav-link {
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 13px;
-	text-decoration: none;
-	background: light;
-	color: black;
-	font-family: "open-sans";
-	transition: 0.3s ease;
-	border-top: 4px solid #f8f9fa;
-	border-bottom: 4px solid #f8f9fa;
-	padding: 20px 0;
-	margin: 0 20px;
+<link href="/vendor/css/bootstrap.min.css" />
+</head>
+<style>
+@media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
 }
 
-/* Global styles */ body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
 }
 
-.container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px;
+.card-registration .select-arrow {
+top: 13px;
 }
 
-/* Footer styles */
-footer {
-	background-color: #db6930;
-	color: #fff;
-	padding: 30px 0;
-	text-align: center;
+.bg-grey {
+background-color: #eae8e8;
 }
 
-.social-buttons .btn {
-	background-color: #54456b;
-	color: #fff;
-	margin: 0 5px;
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	font-size: 24px;
+@media (min-width: 992px) {
+.card-registration-2 .bg-grey {
+border-top-right-radius: 16px;
+border-bottom-right-radius: 16px;
+}
 }
 
-.copyright {
-	background-color: rgba(0, 0, 0, 0.2);
-	padding: 10px 0;
-	font-size: 14px;
+@media (max-width: 991px) {
+.card-registration-2 .bg-grey {
+border-bottom-left-radius: 16px;
+border-bottom-right-radius: 16px;
+}
 }
 </style>
-</head>
+
 <body>
+	<!-- header -->
 	<header><jsp:include page="temples/Header.jsp"></jsp:include>
 	</header>
-	<!------- featured categories----->
-	<div class="categories">
-		<div class="small-container">
-			<div class="row">
-				<div class="col-3">
-					<img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\output (1).png">
-				</div>
-				<div class="col-3">
-					<img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\output (2).png">
-				</div>
-				<div class="col-3">
-					<img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\output.png">
-				</div>
+	<!-- header close -->
+
+	<!-- carousel start -->
+	<div id="carouselExampleFade" class="carousel slide carousel-fade"
+		data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img style="height: 30rem" src="https://clipart-library.com/data_images/76642.jpg"
+					class="d-block w-100" alt="carousel">
+			</div>
+			<div class="carousel-item">
+				<img style="height: 30rem"
+					src="https://static.vecteezy.com/system/resources/previews/000/164/362/original/cute-vector-woman-holding-a-lot-of-shopping-bags.jpg"
+					class="d-block w-100" alt="carouse2">
+			</div>
+			<div class="carousel-item">
+				<img style="height: 30rem"
+					src="https://media.istockphoto.com/vectors/people-shopping-in-a-mall-vector-id486699578?k=6&m=486699578&s=612x612&w=0&h=gUKElmCIxK-NLjfMGLnU6fhOo8tn611jN6fRzzj15_s="
+					class="d-block w-100" alt="caroisel3">
 			</div>
 		</div>
+		<button class="carousel-control-prev" type="button"
+			data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+				class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button"
+			data-bs-target="#carouselExampleFade" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span> <span
+				class="visually-hidden">Next</span>
+		</button>
 	</div>
-	<!-------featured products------->
-	<h2 class="title">Featured Products</h2>
-	<div class="row">
-		<div class="col-4">
-			<img
-				src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Picsart_24-04-01_19-30-41-514.png">
-			<h4>xyz</h4>
-			<div class="rating">
-				<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star-o"></i>
-			</div>
-			<p>$50.00</p>
-		</div>
-		<div class="col-4">
-			<img
-				src="c:\Users\RAHEEMA ENTERPRISES\Pictures\img\Picsart_24-04-01_19-31-07-306.jpg">
-			<h4>xyz</h4>
-			<div class="rating">
-				<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star-o"></i>
-			</div>
-			<p>$50.00</p>
-		</div>
-		<div class="col-4">
-			<img
-				src="c:\Users\RAHEEMA ENTERPRISES\Downloads\Picsart_24-04-01_19-28-49-423.png">
-			<h4>xyz</h4>
-			<div class="rating">
-				<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star-o"></i>
-			</div>
-			<p>$50.00</p>
-		</div>
-		<div class="col-4">
-			<img
-				src="c:\Users\RAHEEMA ENTERPRISES\Pictures\img\Picsart_24-04-01_19-29-23-940.jpg">
-			<h4>xyz</h4>
-			<div class="rating">
-				<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star-o"></i>
-			</div>
-			<p>$50.00</p>
-		</div>
-	</div>
-	<h2 class="title">Latest Products</h2>
-	<div class="row">
-		<div class="col-4">
-			<img
-				src="c:\Users\RAHEEMA ENTERPRISES\Pictures\img\Picsart_24-04-01_19-28-15-206.jpg">
-			<h4>xyz</h4>
-			<div class="rating">
-				<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star-o"></i>`
-			</div>
-			<p>$50.00</p>
-		</div>
-		<div class="col-4">
-			<img
-				src="c:\Users\RAHEEMA ENTERPRISES\Pictures\img\Picsart_24-04-01_19-30-44-548.jpg">
-			<h4>xyz</h4>
-			<div class="rating">
-				<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star-o"></i>
-			</div>
-			<p>$50.00</p>
-		</div>
-		<div class="col-4">
-			<img
-				src="c:\Users\RAHEEMA ENTERPRISES\Pictures\img\Picsart_24-04-01_19-31-29-821.jpg">
-			<h4>xyz</h4>
-			<div class="rating">
-				<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star-o"></i>
-			</div>
-			<p>$50.00</p>
-		</div>
-		<div class="col-4">
-			<img
-				src="c:\Users\RAHEEMA ENTERPRISES\Pictures\img\Picsart_24-04-01_19-29-05-373.jpg">
-			<h4>xyz</h4>
-			<div class="rating">
-				<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-					class="fa fa-star-o"></i>
-			</div>
-			<p>$50.00</p>
-
-
-		</div>
-	</div>
-
-	<!-------offer----->
-	<div class="offer">
-		<div class="small-container">
-			<div class="row">
-				<div class="col-2">
-					<img src="c:\Users\RAHEEMA ENTERPRISES\Downloads\output (3).png"
-						class="offer-img">
-				</div>
-				<div class="col-2">
-					<p>Exclusively Available on ART OR WHAT</p>
-					<h1>THE WEEKND SKULL</h1>
-					<small>asdfgfdsertygvcxsertgvcdsertyhgvcxswertyhbvcxdsertyhvcdertg</small>
-					<a href="Exclusively Available.html" class="btn">Check Out
-						&#8594</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!---testimonial--->
-	<div class="testimonial">
-		<div class="small-container">
-			<div class="row">
-				<div class="col-3">
-					<i class="fa fa-quote-left"></i>
-					<p>Ecommerce is a method of buying and selling goods and
-						services online. The definition of ecommerce business can also
-						include tactics like affiliate marketing. You can use ecommerce
-						channels such as your own website, an established selling website
-						like Amazon, or social media to drive online sales.</p>
-					<div class="rating">
-						<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-							class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-							class="fa fa-star-o"></i>
-					</div>
-					<img src="d:\img\Untitled design (1).png">
-					<h3>Sufiya Shaikh</h3>
-				</div>
-				<div class="col-3">
-					<i class="fa fa-quote-left"></i>
-					<p>Ecommerce is a method of buying and selling goods and
-						services online. The definition of ecommerce business can also
-						include tactics like affiliate marketing. You can use ecommerce
-						channels such as your own website, an established selling website
-						like Amazon, or social media to drive online sales.</p>
-					<div class="rating">
-						<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-							class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-							class="fa fa-star-o"></i>
-					</div>
-					<img src="d:\img\Untitled design (1).png">
-					<h3>Sufiya Shaikh</h3>
-				</div>
-				<div class="col-3">
-					<i class="fa fa-quote-left"></i>
-					<p>Ecommerce is a method of buying and selling goods and
-						services online. The definition of ecommerce business can also
-						include tactics like affiliate marketing. You can use ecommerce
-						channels such as your own website, an established selling website
-						like Amazon, or social media to drive online sales.</p>
-					<div class="rating">
-						<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-							class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-							class="fa fa-star-o"></i>
-					</div>
-					<img src="d:\img\Untitled design (1).png">
-					<h3>Sufiya Shaikh</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!------footer------>
-	<footer>
-		<div class="social-buttons" style="padding-bottom: 20px;">
-			<a href="#" class="btn btn-primary btn-lg btn-floating"><i
-				class="fab fa-facebook-f"></i></a> <a href="#"
-				class="btn btn-primary btn-lg btn-floating"><i
-				class="fab fa-youtube"></i></a> <a href="#"
-				class="btn btn-primary btn-lg btn-floating"><i
-				class="fab fa-instagram"></i></a> <a href="#"
-				class="btn btn-primary btn-lg btn-floating"><i
-				class="fab fa-twitter"></i></a>
-		</div>
-		<div class="copyright">
-			&copy; 2024 Copyright: <a href="https://mdbootstrap.com/"
-				class="text-white">MDBootstrap.com</a>
-		</div>
-	</footer>
-
-	<%-- 	<jsp:include page="temples/LoginModal.jsp"></jsp:include> --%>
-
-	<!-----Js for Toggle Menu------>
-	<script>
-		var MenuItem = document.getElementById("MenuItem");
-		MenuItem.style.maxHeight = "0px";
-		function menutoggle() {
-			if (MenuItem.style.maxHeight = "0px") {
-				MenuItem.style.maxHeight = "200px;"
-			} else {
-				MenuItem.style.maxHeight = "0px";
-
-			}
-		}
-
-		$('.navbar-nav .nav-link').on('click', function() {
-			$('.navbar-nav .nav-link').removeClass('active');
-			$(this).addClass('active');
-		});
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome JS -->
+	<!-- carousel end -->
+	
+	<section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Fancy Product</h5>
+                                    <!-- Product price-->
+                                    $40.00 - $80.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Special Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Sale Item</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Sale Item</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Fancy Product</h5>
+                                    <!-- Product price-->
+                                    $120.00 - $280.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Special Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+	<!-- footer -->
+	<footer class="bg-primary text-center text-white bg-dark"><jsp:include
+			page="temples/Footer.jsp"></jsp:include></footer>
+	<!-- footer close -->
+	<jsp:include page="temples/LoginModal.jsp"></jsp:include>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js">"></script>
 </body>
 </html>

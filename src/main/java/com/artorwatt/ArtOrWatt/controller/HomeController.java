@@ -2,7 +2,6 @@ package com.artorwatt.ArtOrWatt.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
@@ -26,9 +25,22 @@ public class HomeController {
 	public String ContactUs() {
 		return "pages/ContactUs";
 	}
+	@GetMapping("/sign-up")
+	public String RegisterPage() {
+		return "pages/SignUp";
+	}
 	@GetMapping("/about-us")
 	public String AboutUs() {
 		return "pages/AboutUs";
+	}
+	@GetMapping("/login")
+	public String Login() {
+		return "pages/Login";
+	}
+	
+	@GetMapping("/error-page")
+	public String errorPage() {
+		return "pages/error-page";
 	}
 	
 }

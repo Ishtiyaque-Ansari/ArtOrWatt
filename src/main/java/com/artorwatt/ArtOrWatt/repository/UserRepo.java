@@ -8,4 +8,6 @@ import com.artorwatt.ArtOrWatt.beans.User;
 @Repository
 public interface UserRepo extends ListCrudRepository<User, Integer> {
 
+	User findByUsernameAndPassword(String username, String password);
+
 }

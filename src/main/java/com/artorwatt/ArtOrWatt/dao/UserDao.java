@@ -7,4 +7,6 @@ import com.artorwatt.ArtOrWatt.beans.User;
 @Service
 public interface UserDao {
 	User create(User user);
+
+	User searchByLogin(User user);
 }

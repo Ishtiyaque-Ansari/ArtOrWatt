@@ -19,4 +19,10 @@ public class UserDaoImpl implements UserDao {
 		return userRepo.save(user);
 	}
 
+	@Override
+	public User searchByLogin(User user) {
+		// TODO Auto-generated method stub
+		return userRepo.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+	}
+
 }

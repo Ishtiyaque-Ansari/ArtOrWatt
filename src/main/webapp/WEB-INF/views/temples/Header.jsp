@@ -1,25 +1,41 @@
 <!-- Navbar -->
-<nav style="background-color: white; color:white " class="navbar navbar-expand-lg fixed-top bg-light  navbar-light">
-	<div>
-		<a style="margin-left: 4rem; class="typewriter navbar-brand nav-button text-white logo"
-			href="index">Art Or Watt</a>
-	</div>
-	<div class="container" style="margin-left: 18rem;">	
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ms-auto align-items-center">
-				<li class="nav-item"><a class="nav-link mx-2" href="index"><i
-						class="fa-solid fa-house pe-2"></i>Home</a></li>
-				<li class="nav-item"><a class="nav-link mx-2" href="product"><i
-						class="fa-solid fa-house pe-2"></i>Products</a></li>
-				<li class="nav-item"><a class="nav-link mx-2" href="contact-us"><i
-						class="fa-solid fa-house pe-2"></i>Contact Us</a></li>
-				<li class="nav-item"><a class="nav-link mx-2" href="about-us"><i
-						class="fa-solid fa-house pe-2"></i>About Us</a></li>
-						<li class="nav-item"><a class="nav-link mx-2" href="account"><i
-						class="fa-solid fa-house pe-2"></i>Login<span>+</span> </a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-dark">
+	<!-- Container wrapper -->
+	<div class="container-fluid">
+		<!-- Navbar brand -->
+		<a class="navbar-brand mt-2 mt-lg-0" href="index">
+			Art Or Watt
+		</a>
+		<!-- Toggle button -->
+		<button class="navbar-toggler" type="button"
+			data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<i class="fas fa-bars"></i>
+		</button>
 
+		<!-- Collapsible wrapper -->
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<!-- Left links -->
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0 text-right">
+				<li class="nav-item"><a class="nav-link" href="index">Home</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="product">Product</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="contact-us">Contact-us</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="about-us">About-Us</a>
+				</li>
+			</ul>
+			<!-- Left links -->
+		</div>
+		<!-- Right elements -->
+		<div class="d-flex align-items-center justify-content-start">			
+			<a class="btn btn-outline-light" href="login">Log in</a>
+			<!-- Right elements -->
+		</div>
+		<!-- Collapsible wrapper -->
+	</div>
+	<!-- Container wrapper -->
+</nav>
 <!-- Navbar -->
