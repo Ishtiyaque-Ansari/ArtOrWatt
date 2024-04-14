@@ -25,6 +25,7 @@ public class UserController {
 		User createdUser = userService.create(user);
 		createdUser.setPassword(null);
 		modelAndView.addObject("createdUser", createdUser);
+		modelAndView.addObject("message", "Congratulation create successfully");
 		modelAndView.setViewName("redirect:/index");
 		return modelAndView;
 	}
