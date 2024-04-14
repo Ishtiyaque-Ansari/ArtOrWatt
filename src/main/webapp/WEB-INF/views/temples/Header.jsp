@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-dark">
+<nav style="height: 4.5rem" class="navbar navbar-expand-lg navbar-dark bg-primary bg-dark">
 	<!-- Container wrapper -->
 	<div class="container-fluid">
 		<!-- Navbar brand -->

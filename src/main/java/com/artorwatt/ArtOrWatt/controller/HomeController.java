@@ -43,4 +43,8 @@ public class HomeController {
 		return "pages/error-page";
 	}
 	
+	@GetMapping("/Admin")
+	public String Admin() {
+		return "pages/Admin";
+	}
 }
