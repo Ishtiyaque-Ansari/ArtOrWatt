@@ -31,14 +31,12 @@ public class User {
 
 	private String email;
 
-	private String address;
-
 	private String password;
 
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + 
 				", username=" + username +", phoneNo= " + phoneNo + ", email=" + email + 
-				", address=" + address + ", password=" + password +"]";
+				  ", password=" + password +"]";
 	}
 }

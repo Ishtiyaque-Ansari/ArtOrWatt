@@ -402,7 +402,7 @@ body {
 						consectetur adipisicing elit. Error, labore quaerat magni ad
 						dolores libero culpa ipsa fugit voluptates ipsam!</p>
 					<p class="detail__price"></p>
-					<a class="detail__bagBtn text Center">Buy Now</a>
+					<a href="/details" class="detail__bagBtn text Center">Buy Now</a>
 				</div>
 			</div>
 		</div>

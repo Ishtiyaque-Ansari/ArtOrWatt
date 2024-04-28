@@ -40,21 +40,18 @@
 		cellSpacing="1">
 		<thead>
 			<tr>
-			
 				<th scope="col">Id</th>
 				<th scope="col">Name</th>
 				<th scope="col">Clothes Name</th>				
 				<th scope="col">Contact</th>
 				<th scope="col">Size</th>
-				<th scope="col">Order Date</th>
 				<th scope="col">Address</th>
-				<th scope="col">Paid Amount</th>
 				<th scope="col">Quantity</th>
 			</tr>
 		</thead>
 
 		<tbody>
-			<c:forEach items="${Customer}" var="member">
+			<c:forEach items="${User}" var="payment">
 				<tr>					
 				</tr>
 			</c:forEach>

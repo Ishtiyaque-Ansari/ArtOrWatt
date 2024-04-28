@@ -47,4 +47,8 @@ public class HomeController {
 	public String Admin() {
 		return "pages/Admin";
 	}
+	@GetMapping("/details")
+	public String Ahad() {
+		return "pages/OrderDetails";
+	}
 }
